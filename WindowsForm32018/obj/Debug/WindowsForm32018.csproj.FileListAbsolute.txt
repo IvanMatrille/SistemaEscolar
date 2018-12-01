@@ -1,0 +1,54 @@
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.exe.config
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.exe
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.pdb
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\bin\Debug\INF518Core.dll
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\bin\Debug\INF518Core.pdb
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.csprojResolveAssemblyReference.cache
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Form1.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmDialogos.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.MainForm.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Properties.Resources.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaEstudiantes.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmEstudiantes.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmProfesor.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.csproj.GenerateResource.Cache
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.exe
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.pdb
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmLogin.resources
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmEncriptar.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.exe.config
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.exe
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.exe
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\bin\Debug\INF518Core.dll
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\bin\Debug\INF518Core.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.csprojResolveAssemblyReference.cache
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Form1.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmDialogos.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmEncriptar.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmLogin.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.MainForm.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Properties.Resources.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaEstudiantes.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmEstudiantes.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmProfesor.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.csproj.GenerateResource.Cache
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.exe.config
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.exe
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.exe
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\bin\Debug\WindowsForm32018.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\bin\Debug\INF518Core.dll
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\bin\Debug\INF518Core.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.csprojResolveAssemblyReference.cache
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Form1.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmDialogos.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmEncriptar.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.frmLogin.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.MainForm.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Properties.Resources.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaEstudiantes.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmEstudiantes.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmProfesor.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.csproj.GenerateResource.Cache

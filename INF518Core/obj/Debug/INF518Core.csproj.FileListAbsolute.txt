@@ -1,0 +1,15 @@
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\INF518Core\bin\Debug\INF518Core.dll
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\INF518Core\bin\Debug\INF518Core.pdb
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\INF518Core\obj\Debug\INF518Core.dll
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\INF518Core\obj\Debug\INF518Core.pdb
+C:\Users\Nelson Abreu\Desktop\WindowsForm32018\INF518Core\obj\Debug\INF518Core.csprojResolveAssemblyReference.cache
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\INF518Core\bin\Debug\INF518Core.dll
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\INF518Core\bin\Debug\INF518Core.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\INF518Core\obj\Debug\INF518Core.csprojResolveAssemblyReference.cache
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\INF518Core\obj\Debug\INF518Core.dll
+C:\#UASD-semestre 201820\Lenguaje 4\Pila de vaina\WindowsForm32018\INF518Core\obj\Debug\INF518Core.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\INF518Core\bin\Debug\INF518Core.dll
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\INF518Core\bin\Debug\INF518Core.pdb
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\INF518Core\obj\Debug\INF518Core.csprojResolveAssemblyReference.cache
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\INF518Core\obj\Debug\INF518Core.dll
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\INF518Core\obj\Debug\INF518Core.pdb
