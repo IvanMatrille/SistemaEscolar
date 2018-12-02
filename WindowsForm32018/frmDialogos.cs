@@ -44,6 +44,7 @@ namespace WindowsForm32018
             for (int i = 1; i <= 100; i++)
                 comboBox2.Items.Add(DateTime.Now.Date.AddMonths(i));
         }
+
         void LLenarComboBoxOcupaciones()
         {
             this.comboBox1.DataSource = mant.GetListadoOcupaciones();

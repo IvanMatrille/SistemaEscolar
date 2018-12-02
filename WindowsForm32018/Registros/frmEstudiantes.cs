@@ -20,6 +20,7 @@ namespace WindowsForm32018.Registros
         private static frmEstudiantes instancia;
         Mantenimiento mant;
         TipoEstudianteMant tipoEst;
+        CarreraMantenimiento carreraMant;
         Estudiante estudiante;
         Session session;
 
@@ -30,6 +31,7 @@ namespace WindowsForm32018.Registros
             this.session = session;
             mant = new Mantenimiento(session);
             tipoEst = new TipoEstudianteMant(session);
+            carreraMant = new CarreraMantenimiento(session);
             estudiante = new Estudiante();
             if (id > 0)
             {
@@ -39,6 +41,8 @@ namespace WindowsForm32018.Registros
             }
 
             llenarComboTipoEstudiante();
+            llenarComboSexo();
+            llenarComboCarreras();
         }
 
         void llenarComboTipoEstudiante()
@@ -46,6 +50,18 @@ namespace WindowsForm32018.Registros
             this.cbTipoEstudiante.DataSource = tipoEst.GetTiposEstudiantes();
             this.cbTipoEstudiante.ValueMember = "ID";
             this.cbTipoEstudiante.DisplayMember = "Descripcion";            
+        }
+
+        void llenarComboCarreras()
+        {
+            this.cbCarrera.DataSource = carreraMant.GetListadoCarreras();
+            this.cbCarrera.ValueMember = "ID";
+            this.cbCarrera.DisplayMember = "Descripcion"; 
+        }
+        void llenarComboSexo()
+        {
+            cbSexo.Items.Add("M");
+            cbSexo.Items.Add("F");
         }
 
         void updateFormulario()
@@ -71,25 +87,7 @@ namespace WindowsForm32018.Registros
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (camposValidados())
-            {
-                updateEstudianteClass();
-                mant.GuardarEstudiante(this.estudiante);
-                if (mant.Error.ID == 1)
-                {
-                    MessageBox.Show("Información Guardada Satisfactoriamente.",
-                        "Información",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-
-                else
-                {
-                    MessageBox.Show(mant.Error.Descripcion);
-                }
-            }
+            
         }
         /// <summary>
         /// Actualiza la clase de estudiante desde los controles del formulario
@@ -100,25 +98,31 @@ namespace WindowsForm32018.Registros
             estudiante.Nombre = this.txtNombre.Text;
             estudiante.Apellido = this.txtApellido.Text;
             estudiante.FechaNacimiento = this.dtpFechaNacimiento.Value;
+            estudiante.Cedula = this.txtCedula.Text;
+            estudiante.Email = this.txtEmail.Text;
+            estudiante.EstadoCivil = this.cbEstadoCivil.Text;
+            estudiante.IdTipoEstudiante = Int32.Parse(this.cbTipoEstudiante.SelectedValue.ToString());
+            estudiante.Sexo = this.cbSexo.Text;
+            estudiante.Observaciones = this.txtObservaciones.Text;
+            estudiante.TelefonoCasa = this.txtTelefono.Text;
+            estudiante.TelefonoMovil = this.txtCelular.Text;
+            estudiante.IDCarrera = Int32.Parse(this.cbCarrera.SelectedValue.ToString());
 
         }
         bool camposValidados()
         {
             errorProvider1.Clear(); //limpia los errores que existan.
-            if(this.txtNombre.Text.Trim().Length==0)
-            {
-                this.txtNombre.Focus();
-                errorProvider1.SetError(this.txtNombre, "El nombre no puede estar en blanco");
-                return false;
-            }
-            if(string.IsNullOrWhiteSpace(this.txtApellido.Text))
+            
+            if (string.IsNullOrWhiteSpace(this.txtNombre.Text) && string.IsNullOrWhiteSpace(this.txtApellido.Text)
+                && string.IsNullOrWhiteSpace(this.txtCedula.Text))
             {
                 this.txtApellido.Focus();
-                MessageBox.Show("El apellido no puede estar en blanco", "Advertencia",
+                MessageBox.Show("No puede dejar campos en blanco", "Advertencia",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return false;
             }
+            
             return true;
         }
 
@@ -142,6 +146,31 @@ namespace WindowsForm32018.Registros
                 //this.Refresh();
             }
             
+        }
+
+        private void btnAceptar_Click_1(object sender, EventArgs e)
+        {
+
+            if (camposValidados())
+            {
+                updateEstudianteClass();
+                mant.GuardarEstudiante(this.estudiante);
+                if (mant.Error.ID == 1)
+                {
+                    MessageBox.Show("Información Guardada Satisfactoriamente.",
+                        "Información",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+
+                else
+                {
+                    MessageBox.Show(mant.Error.Descripcion);
+                }
+            }
+
         }
     }
 }

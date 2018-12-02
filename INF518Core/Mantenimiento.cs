@@ -46,8 +46,9 @@ namespace INF518Core
         public DataTable GetListadoEstudiantes(string filtro)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT ID, Nombre, Apellido, FechaNacimiento " +
-                " FROM tblEstudiante3 ");
+            sql.Append("SELECT ID, IdTipoEstudiante, Matricula, Cedula, Nombre, Apellido, Sexo, FechaNacimiento,"
+                    + " EstadoCivil, TelefonoCasa, TelefonoMovil, Email, Observaciones, IDCarrera "
+                    + " FROM tblEstudiante ");
             if (!string.IsNullOrWhiteSpace(filtro))
             {
                 sql.Append(" WHERE ");
@@ -86,19 +87,44 @@ namespace INF518Core
         public void GuardarEstudiante(Estudiante item)
         {
             StringBuilder sql = new StringBuilder();
+
             if (item.ID == 0)
-            { 
-                sql.AppendFormat("INSERT INTO tblEstudiante3 VALUES ('{0}','{1}','{2}')",
+            {
+                 sql.AppendFormat("INSERT INTO tblEstudiante ( IdTipoEstudiante, Cedula, Nombre, Apellido, Sexo, FechaNacimiento,"
+                    + " EstadoCivil, TelefonoCasa, TelefonoMovil, Email, Observaciones, IDCarrera)"
+                    + " VALUES " 
+                    + "( {0}, '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', {11} )",
+                    item.IdTipoEstudiante,
+                    item.Cedula,
                     item.Nombre,
                     item.Apellido,
-                    item.FechaNacimiento.Date.ToString("yyyy/MM/dd"));
+                    item.Sexo,
+                    item.FechaNacimiento.Date.ToString("yyyy/MM/dd"),
+                    item.EstadoCivil,
+                    item.TelefonoCasa,
+                    item.TelefonoMovil,
+                    item.Email,
+                    item.Observaciones,
+                    item.IDCarrera);
             }
             if (item.ID > 0)
             {
-                sql.AppendFormat("UPDATE tblEstudiante3 SET Nombre='{0}', Apellido='{1}', FechaNacimiento='{2}' WHERE ID={3}",
+                sql.AppendFormat("UPDATE tblEstudiantes2 SET " 
+                    + "IdTipoEstudiante='{0}', Cedula='{1}, Nombre='{2}', Apellido='{3}', Sexo='{4}', FechaNacimiento='{5}' "
+                    + "EstadoCivil='{6}', TelefonoCasa='{7}', TelefonoMovil='{8}', Email='{9}', Observaciones='{10}', "
+                    + "IDCarrera='{11} WHERE ID={12}",
+                    item.IdTipoEstudiante,
+                    item.Cedula,
                     item.Nombre,
                     item.Apellido,
-                    item.FechaNacimiento.Date.ToString("yyyy/MM/dd"), 
+                    item.Sexo,
+                    item.FechaNacimiento.Date.ToString("yyyy/MM/dd"),
+                    item.EstadoCivil,
+                    item.TelefonoCasa,
+                    item.TelefonoMovil,
+                    item.Email,
+                    item.Observaciones,
+                    item.IDCarrera,
                     item.ID);
             }
             Command.CommandType = CommandType.Text;
