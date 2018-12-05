@@ -1,6 +1,6 @@
 ﻿namespace WindowsForm32018.Registros
 {
-    partial class frmConsultaEstudiantes
+    partial class frmConsultaProfesores
     {
         /// <summary>
         /// Required designer variable.
@@ -40,12 +40,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,12 +65,10 @@
             this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
-            this.ColMatricula,
             this.colNombre,
             this.colApellido,
             this.ColCedula,
             this.colFechaNacimiento,
-            this.ColCarrera,
             this.ColTelefono,
             this.ColEmail,
             this.ColCelular,
@@ -85,13 +81,13 @@
             this.dgvEstudiantes.RowHeadersVisible = false;
             this.dgvEstudiantes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstudiantes.Size = new System.Drawing.Size(994, 223);
+            this.dgvEstudiantes.Size = new System.Drawing.Size(889, 223);
             this.dgvEstudiantes.TabIndex = 0;
             // 
             // btnBuscar
             // 
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnBuscar.Location = new System.Drawing.Point(802, 6);
+            this.btnBuscar.Location = new System.Drawing.Point(697, 6);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(99, 23);
             this.btnBuscar.TabIndex = 1;
@@ -119,7 +115,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(802, 31);
+            this.btnImprimir.Location = new System.Drawing.Point(697, 31);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(99, 23);
             this.btnImprimir.TabIndex = 5;
@@ -129,7 +125,7 @@
             // btnNuevo
             // 
             this.btnNuevo.ForeColor = System.Drawing.Color.Green;
-            this.btnNuevo.Location = new System.Drawing.Point(907, 6);
+            this.btnNuevo.Location = new System.Drawing.Point(802, 6);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 23);
             this.btnNuevo.TabIndex = 6;
@@ -140,7 +136,7 @@
             // btnModificar
             // 
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnModificar.Location = new System.Drawing.Point(907, 31);
+            this.btnModificar.Location = new System.Drawing.Point(802, 31);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(99, 23);
             this.btnModificar.TabIndex = 7;
@@ -151,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(892, 296);
+            this.label2.Location = new System.Drawing.Point(787, 296);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 4;
@@ -160,7 +156,7 @@
             // lblTotal
             // 
             this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotal.Location = new System.Drawing.Point(930, 292);
+            this.lblTotal.Location = new System.Drawing.Point(825, 292);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(76, 20);
             this.lblTotal.TabIndex = 8;
@@ -174,15 +170,6 @@
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
             this.colID.Width = 25;
-            // 
-            // ColMatricula
-            // 
-            this.ColMatricula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColMatricula.DataPropertyName = "Matricula";
-            this.ColMatricula.HeaderText = "Matricula";
-            this.ColMatricula.Name = "ColMatricula";
-            this.ColMatricula.ReadOnly = true;
-            this.ColMatricula.Width = 75;
             // 
             // colNombre
             // 
@@ -216,12 +203,6 @@
             this.colFechaNacimiento.HeaderText = "F. Nacimiento";
             this.colFechaNacimiento.Name = "colFechaNacimiento";
             this.colFechaNacimiento.ReadOnly = true;
-            // 
-            // ColCarrera
-            // 
-            this.ColCarrera.DataPropertyName = "IDCarrera";
-            this.ColCarrera.HeaderText = "Carrera";
-            this.ColCarrera.Name = "ColCarrera";
             // 
             // ColTelefono
             // 
@@ -272,12 +253,12 @@
             this.ColSexo.ReadOnly = true;
             this.ColSexo.Width = 56;
             // 
-            // frmConsultaEstudiantes
+            // frmConsultaProfesores
             // 
             this.AcceptButton = this.btnBuscar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 321);
+            this.ClientSize = new System.Drawing.Size(917, 321);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnModificar);
@@ -286,9 +267,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvEstudiantes);
-            this.Name = "frmConsultaEstudiantes";
+            this.Name = "frmConsultaProfesores";
             this.ShowInTaskbar = false;
-            this.Text = "Consulta de Estudiantes";
+            this.Text = "Consulta de Profesores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -309,12 +290,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMatricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaNacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCarrera;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCelular;

@@ -53,7 +53,7 @@ namespace WindowsForm32018
 
         private void estudianteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO: solo abre un formulario frmEstudiantes frm = frmEstudiantes.getInstancia();
+            
             frmConsultaEstudiantes frm = new frmConsultaEstudiantes(session);
             frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterScreen;
@@ -63,16 +63,12 @@ namespace WindowsForm32018
 
         private void profesorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProfesor frm = new frmProfesor();
-            //frm.MdiParent = this;
+           
+            frmConsultaProfesores frm = new frmConsultaProfesores(session);
+            frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterScreen;
-            //profesorToolStripMenuItem.Enabled = false;
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                MessageBox.Show("OK");
-                MessageBox.Show(frm.txtNombre.Text);
-             }
-            frm.Dispose();
+            frm.Show();
+            //this.estudianteToolStripMenuItem.Enabled = false;
         }
 
         private void dialogosToolStripMenuItem_Click(object sender, EventArgs e)

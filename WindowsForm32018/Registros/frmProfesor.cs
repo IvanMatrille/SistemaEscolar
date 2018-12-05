@@ -15,49 +15,35 @@ using INF518Core.Mantenimientos;
 
 namespace WindowsForm32018.Registros
 {
-    public partial class frmEstudiantes : Form
+    public partial class frmProfesor : Form
     {
-        private static frmEstudiantes instancia;
-        Mantenimiento mant;
+        private static frmProfesor instancia;
+        ProfesorMantenimiento mant;
         TipoEstudianteMant tipoEst;
         CarreraMantenimiento carreraMant;
-        Estudiante estudiante;
+        Profesor objeto;
         Session session;
 
-        public frmEstudiantes(int id, Session session)
+        public frmProfesor(int id, Session session)
         {
             
             InitializeComponent();
             this.session = session;
-            mant = new Mantenimiento(session);
+            mant = new ProfesorMantenimiento(session);
             tipoEst = new TipoEstudianteMant(session);
             carreraMant = new CarreraMantenimiento(session);
-            estudiante = new Estudiante();
+            objeto = new Profesor();
             if (id > 0)
             {
-                estudiante = mant.GetEstudianteInfo(id); //busca los datos del formulario
+                objeto = mant.GetInfo(id); //busca los datos del formulario
                 this.lblID.Text = id.ToString();
                 updateFormulario();
             }
 
-            llenarComboTipoEstudiante();
             llenarComboSexo();
-            llenarComboCarreras();
         }
 
-        void llenarComboTipoEstudiante()
-        {
-            this.cbTipoEstudiante.DataSource = tipoEst.GetTiposEstudiantes();
-            this.cbTipoEstudiante.ValueMember = "ID";
-            this.cbTipoEstudiante.DisplayMember = "Descripcion";            
-        }
-
-        void llenarComboCarreras()
-        {
-            this.cbCarrera.DataSource = carreraMant.GetListadoCarreras();
-            this.cbCarrera.ValueMember = "ID";
-            this.cbCarrera.DisplayMember = "Descripcion"; 
-        }
+                
         void llenarComboSexo()
         {
             cbSexo.Items.Add("M");
@@ -66,28 +52,27 @@ namespace WindowsForm32018.Registros
 
         void updateFormulario()
         {
-            estudiante.ToString();
-            this.txtNombre.Text = estudiante.Nombre;
-            this.txtApellido.Text = estudiante.Apellido;
-            this.dtpFechaNacimiento.Value = estudiante.FechaNacimiento;
-            this.txtCedula.Text = estudiante.Cedula;
-            this.txtMatricula.Text = estudiante.Matrícula;
-            this.txtTelefono.Text = estudiante.TelefonoCasa;
-            this.txtCelular.Text = estudiante.TelefonoMovil;
-            this.txtEmail.Text = estudiante.Email;
-            this.txtObservaciones.Text = estudiante.Observaciones;
+            objeto.ToString();
+            this.txtNombre.Text = objeto.Nombre;
+            this.txtApellido.Text = objeto.Apellido;
+            this.dtpFechaNacimiento.Value = objeto.FechaNacimiento;
+            this.txtCedula.Text = objeto.Cedula;
+            this.txtTelefono.Text = objeto.TelefonoCasa;
+            this.txtCelular.Text = objeto.TelefonoMovil;
+            this.txtEmail.Text = objeto.Email;
+            this.txtObservaciones.Text = objeto.Observaciones;
             
         }
-        private frmEstudiantes()
+        private frmProfesor()
         {
             InitializeComponent();
-            mant = new Mantenimiento(null);
+            mant = new ProfesorMantenimiento(null);
         }
-        public static frmEstudiantes getInstancia()
+        public static frmProfesor getInstancia()
         {
             //patron de diseno singleton
             if (instancia == null || instancia.IsDisposed)
-                instancia = new frmEstudiantes();
+                instancia = new frmProfesor();
 
             return instancia;
         }
@@ -100,21 +85,18 @@ namespace WindowsForm32018.Registros
         /// Actualiza la clase de objeto desde los controles del formulario
         /// luego se envia a guardar para grabarlos e la BD
         /// </summary>
-        void updateEstudianteClass()
+        void updateClass()
         {
-            estudiante.Nombre = this.txtNombre.Text;
-            estudiante.Apellido = this.txtApellido.Text;
-            estudiante.FechaNacimiento = this.dtpFechaNacimiento.Value;
-            estudiante.Cedula = this.txtCedula.Text;
-            estudiante.Email = this.txtEmail.Text;
-            estudiante.EstadoCivil = this.cbEstadoCivil.Text;
-            estudiante.IdTipoEstudiante = Int32.Parse(this.cbTipoEstudiante.SelectedValue.ToString());
-            estudiante.Sexo = this.cbSexo.Text;
-            estudiante.Observaciones = this.txtObservaciones.Text;
-            estudiante.TelefonoCasa = this.txtTelefono.Text;
-            estudiante.TelefonoMovil = this.txtCelular.Text;
-            estudiante.IDCarrera = Int32.Parse(this.cbCarrera.SelectedValue.ToString());
-
+            objeto.Nombre = this.txtNombre.Text;
+            objeto.Apellido = this.txtApellido.Text;
+            objeto.FechaNacimiento = this.dtpFechaNacimiento.Value;
+            objeto.Cedula = this.txtCedula.Text;
+            objeto.Email = this.txtEmail.Text;
+            objeto.EstadoCivil = this.cbEstadoCivil.Text;
+            objeto.Sexo = this.cbSexo.Text;
+            objeto.Observaciones = this.txtObservaciones.Text;
+            objeto.TelefonoCasa = this.txtTelefono.Text;
+            objeto.TelefonoMovil = this.txtCelular.Text;
         }
         bool camposValidados()
         {
@@ -160,8 +142,8 @@ namespace WindowsForm32018.Registros
 
             if (camposValidados())
             {
-                updateEstudianteClass();
-                mant.GuardarEstudiante(this.estudiante);
+                updateClass();
+                mant.Guardar(this.objeto);
                 if (mant.Error.ID == 1)
                 {
                     MessageBox.Show("Información Guardada Satisfactoriamente.",

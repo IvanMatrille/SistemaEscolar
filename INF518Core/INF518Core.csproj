@@ -45,11 +45,13 @@
     <Compile Include="ClaseBase.cs" />
     <Compile Include="Clases\CryptorEngine.cs" />
     <Compile Include="Clases\MenuPrincipal.cs" />
+    <Compile Include="Clases\Profesor.cs" />
     <Compile Include="Clases\Session.cs" />
     <Compile Include="ErrorResponse.cs" />
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Mantenimiento.cs" />
     <Compile Include="Mantenimientos\CarreraMantenimiento.cs" />
+    <Compile Include="Mantenimientos\ProfesorMantenimiento.cs" />
     <Compile Include="Mantenimientos\TipoEstudianteMant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
