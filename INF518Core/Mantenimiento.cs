@@ -109,10 +109,10 @@ namespace INF518Core
             }
             if (item.ID > 0)
             {
-                sql.AppendFormat("UPDATE tblEstudiantes2 SET " 
-                    + "IdTipoEstudiante='{0}', Cedula='{1}, Nombre='{2}', Apellido='{3}', Sexo='{4}', FechaNacimiento='{5}' "
+                sql.AppendFormat("UPDATE tblEstudiante SET "
+                    + " IdTipoEstudiante={0}, Cedula='{1}', Nombre='{2}', Apellido='{3}', Sexo='{4}', FechaNacimiento='{5}', "
                     + "EstadoCivil='{6}', TelefonoCasa='{7}', TelefonoMovil='{8}', Email='{9}', Observaciones='{10}', "
-                    + "IDCarrera='{11} WHERE ID={12}",
+                    + "IDCarrera={11}  WHERE ID={12}",
                     item.IdTipoEstudiante,
                     item.Cedula,
                     item.Nombre,
@@ -152,8 +152,9 @@ namespace INF518Core
         {
             Estudiante item = new Estudiante();
             StringBuilder str = new StringBuilder();
-            str.AppendFormat("SELECT ID, Nombre, Apellido, FechaNacimiento " +
-                " FROM tblEstudiante3 WHERE ID={0};", id);
+            str.AppendFormat("SELECT ID, IdTipoEstudiante, Matricula, Cedula, Nombre, Apellido, Sexo, FechaNacimiento,"
+                    + " EstadoCivil, TelefonoCasa, TelefonoMovil, Email, Observaciones, IDCarrera "
+                    + " FROM tblEstudiante WHERE ID={0};", id);
             Command.CommandText = str.ToString();
             Command.Connection = Connection;
             Command.CommandType = CommandType.Text;
@@ -168,7 +169,18 @@ namespace INF518Core
                         item.ID = reader.GetInt32(0);
                         item.Nombre = reader["Nombre"].ToString();
                         item.Apellido = reader["Apellido"].ToString();
+                        item.Observaciones = reader["Observaciones"].ToString();
+                        item.Email = reader["Email"].ToString();
+                        item.TelefonoCasa = reader["TelefonoCasa"].ToString();
+                        item.TelefonoMovil = reader["TelefonoMovil"].ToString();
+                        item.Cedula = reader["Cedula"].ToString();
+                        item.Matrícula = reader["Matricula"].ToString();
+                        item.Sexo = reader["Sexo"].ToString();
+                        item.EstadoCivil = reader["EstadoCivil"].ToString();
+                        item.IDCarrera = Convert.ToInt32(reader[""].ToString());
+                        item.balance = Convert.ToDouble(reader["Balance"].ToString());
                         item.FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"]);
+                        item.IdTipoEstudiante = Convert.ToInt32(reader["idTipoEstudiante"].ToString());
                     }
                     reader.Close();
                 }

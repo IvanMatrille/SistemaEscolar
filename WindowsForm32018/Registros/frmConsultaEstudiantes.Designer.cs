@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEstudiantes = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -43,6 +43,7 @@
             this.ColMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +61,8 @@
             this.dgvEstudiantes.AllowUserToAddRows = false;
             this.dgvEstudiantes.AllowUserToDeleteRows = false;
             this.dgvEstudiantes.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvEstudiantes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvEstudiantes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEstudiantes.BackgroundColor = System.Drawing.Color.White;
             this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -69,6 +70,7 @@
             this.ColMatricula,
             this.colNombre,
             this.colApellido,
+            this.ColCedula,
             this.colFechaNacimiento,
             this.ColCarrera,
             this.ColTelefono,
@@ -89,7 +91,7 @@
             // btnBuscar
             // 
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnBuscar.Location = new System.Drawing.Point(634, 6);
+            this.btnBuscar.Location = new System.Drawing.Point(802, 6);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(99, 23);
             this.btnBuscar.TabIndex = 1;
@@ -117,7 +119,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(634, 31);
+            this.btnImprimir.Location = new System.Drawing.Point(802, 31);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(99, 23);
             this.btnImprimir.TabIndex = 5;
@@ -127,7 +129,7 @@
             // btnNuevo
             // 
             this.btnNuevo.ForeColor = System.Drawing.Color.Green;
-            this.btnNuevo.Location = new System.Drawing.Point(739, 6);
+            this.btnNuevo.Location = new System.Drawing.Point(907, 6);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 23);
             this.btnNuevo.TabIndex = 6;
@@ -138,7 +140,7 @@
             // btnModificar
             // 
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnModificar.Location = new System.Drawing.Point(739, 31);
+            this.btnModificar.Location = new System.Drawing.Point(907, 31);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(99, 23);
             this.btnModificar.TabIndex = 7;
@@ -149,7 +151,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(724, 296);
+            this.label2.Location = new System.Drawing.Point(892, 296);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 4;
@@ -158,7 +160,7 @@
             // lblTotal
             // 
             this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotal.Location = new System.Drawing.Point(762, 292);
+            this.lblTotal.Location = new System.Drawing.Point(930, 292);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(76, 20);
             this.lblTotal.TabIndex = 8;
@@ -198,11 +200,19 @@
             this.colApellido.Name = "colApellido";
             this.colApellido.ReadOnly = true;
             // 
+            // ColCedula
+            // 
+            this.ColCedula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColCedula.DataPropertyName = "Cedula";
+            this.ColCedula.HeaderText = "Cedula";
+            this.ColCedula.Name = "ColCedula";
+            this.ColCedula.Width = 65;
+            // 
             // colFechaNacimiento
             // 
             this.colFechaNacimiento.DataPropertyName = "FechaNacimiento";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colFechaNacimiento.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colFechaNacimiento.DefaultCellStyle = dataGridViewCellStyle4;
             this.colFechaNacimiento.HeaderText = "F. Nacimiento";
             this.colFechaNacimiento.Name = "colFechaNacimiento";
             this.colFechaNacimiento.ReadOnly = true;
@@ -302,6 +312,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMatricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaNacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCarrera;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTelefono;

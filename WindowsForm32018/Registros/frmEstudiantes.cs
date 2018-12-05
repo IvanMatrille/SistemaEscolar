@@ -66,9 +66,16 @@ namespace WindowsForm32018.Registros
 
         void updateFormulario()
         {
+            estudiante.ToString();
             this.txtNombre.Text = estudiante.Nombre;
             this.txtApellido.Text = estudiante.Apellido;
             this.dtpFechaNacimiento.Value = estudiante.FechaNacimiento;
+            this.txtCedula.Text = estudiante.Cedula;
+            this.txtMatricula.Text = estudiante.Matrícula;
+            this.txtTelefono.Text = estudiante.TelefonoCasa;
+            this.txtCelular.Text = estudiante.TelefonoMovil;
+            this.txtEmail.Text = estudiante.Email;
+            this.txtObservaciones.Text = estudiante.Observaciones;
             
         }
         private frmEstudiantes()
