@@ -55,3 +55,5 @@ C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsFo
 C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaProfesores.resources
 C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaCentros.resources
 C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmCentros.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmAulas.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaAulas.resources

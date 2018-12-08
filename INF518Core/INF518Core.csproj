@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClaseBase.cs" />
+    <Compile Include="Clases\Aulas.cs" />
     <Compile Include="Clases\Centros.cs" />
     <Compile Include="Clases\CryptorEngine.cs" />
     <Compile Include="Clases\MenuPrincipal.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="ErrorResponse.cs" />
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Mantenimiento.cs" />
+    <Compile Include="Mantenimientos\AulasMantenimiento.cs" />
     <Compile Include="Mantenimientos\CarreraMantenimiento.cs" />
     <Compile Include="Mantenimientos\CentrosMantenimiento.cs" />
     <Compile Include="Mantenimientos\ProfesorMantenimiento.cs" />

@@ -162,6 +162,7 @@
             this.aulasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aulasToolStripMenuItem.Tag = "205";
             this.aulasToolStripMenuItem.Text = "Aulas";
+            this.aulasToolStripMenuItem.Click += new System.EventHandler(this.aulasToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 

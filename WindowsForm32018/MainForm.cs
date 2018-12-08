@@ -136,8 +136,15 @@ namespace WindowsForm32018
 
         private void centrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             frmConsultaCentros frm = new frmConsultaCentros(session);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void aulasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaAulas frm = new frmConsultaAulas(session);
             frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
