@@ -133,5 +133,14 @@ namespace WindowsForm32018
             StringBuilder stb = new StringBuilder();                   
             this.tsRejoj.Text = stb.AppendFormat("{0:d2}:{1:d2}:{2:d2}", hora, min, seg).ToString();
         }
+
+        private void centrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frmConsultaCentros frm = new frmConsultaCentros(session);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
     }
 }

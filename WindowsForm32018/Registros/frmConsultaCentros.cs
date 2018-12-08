@@ -13,16 +13,16 @@ using WindowsForm32018.Clases;
 
 namespace WindowsForm32018.Registros
 {
-    public partial class frmConsultaProfesores : Form
+    public partial class frmConsultaCentros : Form
     {
-        ProfesorMantenimiento mant;
+        CentrosMantenimiento mant;
         DataTable dt;
         Session session;
-        public frmConsultaProfesores(Session session)
+        public frmConsultaCentros(Session session)
         {
             InitializeComponent();
             this.session = session;
-            mant = new ProfesorMantenimiento(session);
+            mant = new CentrosMantenimiento(session);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -45,14 +45,15 @@ namespace WindowsForm32018.Registros
             StringBuilder filtro = new StringBuilder("ID>0 ");
             if (!string.IsNullOrWhiteSpace(this.txtNombre.Text))
             {
-                filtro.AppendFormat("AND (Nombre+' '+Apellido) LIKE '%{0}%' ",
+                filtro.AppendFormat("AND (Descripcion+' '+NombreCorto) LIKE '%{0}%' ",
                                 this.txtNombre.Text);
             }
             return filtro.ToString();
         }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmProfesor frm = new frmProfesor(0, session);
+            frmCentros frm = new frmCentros(0, session);
             frm.StartPosition = FormStartPosition.CenterScreen;
             if(frm.ShowDialog()==DialogResult.OK)
             {
@@ -66,7 +67,7 @@ namespace WindowsForm32018.Registros
             int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
             if (id > 0)
             {
-                frmProfesor frm = new frmProfesor(id, session);
+                frmCentros frm = new frmCentros(id, session);
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
@@ -90,7 +91,13 @@ namespace WindowsForm32018.Registros
             int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
             if (id > 0)
             {
-                mant.Eliminar(id);
+                if (MessageBox.Show("¿Está seguro que desea eliminar este centro?", "Advertencia",
+                   MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                {
+                    mant.Eliminar(id);
+                    return;
+                }
+                
             }
         }
     }

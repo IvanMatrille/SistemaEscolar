@@ -1,6 +1,6 @@
 ﻿namespace WindowsForm32018.Registros
 {
-    partial class frmConsultaProfesores
+    partial class frmConsultaCentros
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEstudiantes = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -38,18 +37,13 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEstadoCivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreCorto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColWebSite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -59,35 +53,30 @@
             this.dgvEstudiantes.AllowUserToAddRows = false;
             this.dgvEstudiantes.AllowUserToDeleteRows = false;
             this.dgvEstudiantes.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvEstudiantes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvEstudiantes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEstudiantes.BackgroundColor = System.Drawing.Color.White;
             this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
-            this.colNombre,
-            this.colApellido,
-            this.ColCedula,
-            this.colFechaNacimiento,
+            this.colDescripcion,
+            this.colNombreCorto,
+            this.ColWebSite,
             this.ColTelefono,
-            this.ColEmail,
-            this.ColCelular,
-            this.ColEstadoCivil,
-            this.ColObservaciones,
-            this.ColSexo});
-            this.dgvEstudiantes.Location = new System.Drawing.Point(12, 66);
+            this.ColObservaciones});
+            this.dgvEstudiantes.Location = new System.Drawing.Point(12, 70);
             this.dgvEstudiantes.MultiSelect = false;
             this.dgvEstudiantes.Name = "dgvEstudiantes";
             this.dgvEstudiantes.RowHeadersVisible = false;
             this.dgvEstudiantes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstudiantes.Size = new System.Drawing.Size(889, 223);
+            this.dgvEstudiantes.Size = new System.Drawing.Size(850, 223);
             this.dgvEstudiantes.TabIndex = 0;
             // 
             // btnBuscar
             // 
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnBuscar.Location = new System.Drawing.Point(591, 6);
+            this.btnBuscar.Location = new System.Drawing.Point(658, 9);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(99, 23);
             this.btnBuscar.TabIndex = 1;
@@ -116,7 +105,7 @@
             // btnNuevo
             // 
             this.btnNuevo.ForeColor = System.Drawing.Color.Green;
-            this.btnNuevo.Location = new System.Drawing.Point(696, 6);
+            this.btnNuevo.Location = new System.Drawing.Point(763, 9);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 23);
             this.btnNuevo.TabIndex = 6;
@@ -127,7 +116,7 @@
             // btnModificar
             // 
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnModificar.Location = new System.Drawing.Point(696, 34);
+            this.btnModificar.Location = new System.Drawing.Point(763, 37);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(99, 23);
             this.btnModificar.TabIndex = 7;
@@ -138,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(787, 296);
+            this.label2.Location = new System.Drawing.Point(748, 300);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 4;
@@ -147,106 +136,16 @@
             // lblTotal
             // 
             this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotal.Location = new System.Drawing.Point(825, 292);
+            this.lblTotal.Location = new System.Drawing.Point(786, 296);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(76, 20);
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "0";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // colID
-            // 
-            this.colID.DataPropertyName = "ID";
-            this.colID.HeaderText = "ID";
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Width = 25;
-            // 
-            // colNombre
-            // 
-            this.colNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colNombre.DataPropertyName = "Nombre";
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 69;
-            // 
-            // colApellido
-            // 
-            this.colApellido.DataPropertyName = "Apellido";
-            this.colApellido.HeaderText = "Apellido";
-            this.colApellido.Name = "colApellido";
-            this.colApellido.ReadOnly = true;
-            // 
-            // ColCedula
-            // 
-            this.ColCedula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColCedula.DataPropertyName = "Cedula";
-            this.ColCedula.HeaderText = "Cedula";
-            this.ColCedula.Name = "ColCedula";
-            this.ColCedula.Width = 65;
-            // 
-            // colFechaNacimiento
-            // 
-            this.colFechaNacimiento.DataPropertyName = "FechaNacimiento";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colFechaNacimiento.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colFechaNacimiento.HeaderText = "F. Nacimiento";
-            this.colFechaNacimiento.Name = "colFechaNacimiento";
-            this.colFechaNacimiento.ReadOnly = true;
-            // 
-            // ColTelefono
-            // 
-            this.ColTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.ColTelefono.DataPropertyName = "TelefonoCasa";
-            this.ColTelefono.HeaderText = "Telefono";
-            this.ColTelefono.Name = "ColTelefono";
-            this.ColTelefono.Width = 5;
-            // 
-            // ColEmail
-            // 
-            this.ColEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.ColEmail.DataPropertyName = "Email";
-            this.ColEmail.HeaderText = "Correo";
-            this.ColEmail.Name = "ColEmail";
-            this.ColEmail.Width = 5;
-            // 
-            // ColCelular
-            // 
-            this.ColCelular.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.ColCelular.DataPropertyName = "TelefonoMovil";
-            this.ColCelular.HeaderText = "Celular";
-            this.ColCelular.Name = "ColCelular";
-            this.ColCelular.Width = 5;
-            // 
-            // ColEstadoCivil
-            // 
-            this.ColEstadoCivil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColEstadoCivil.DataPropertyName = "EstadoCivil";
-            this.ColEstadoCivil.HeaderText = "Estado Civil";
-            this.ColEstadoCivil.Name = "ColEstadoCivil";
-            this.ColEstadoCivil.Width = 87;
-            // 
-            // ColObservaciones
-            // 
-            this.ColObservaciones.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColObservaciones.DataPropertyName = "Observaciones";
-            this.ColObservaciones.HeaderText = "Observaciones";
-            this.ColObservaciones.Name = "ColObservaciones";
-            this.ColObservaciones.Width = 103;
-            // 
-            // ColSexo
-            // 
-            this.ColSexo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColSexo.DataPropertyName = "Sexo";
-            this.ColSexo.HeaderText = "Sexo";
-            this.ColSexo.Name = "ColSexo";
-            this.ColSexo.ReadOnly = true;
-            this.ColSexo.Width = 56;
-            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(591, 32);
+            this.btnEliminar.Location = new System.Drawing.Point(658, 35);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(99, 23);
             this.btnEliminar.TabIndex = 9;
@@ -254,12 +153,63 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // frmConsultaProfesores
+            // colID
+            // 
+            this.colID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.colID.DataPropertyName = "ID";
+            this.colID.HeaderText = "ID";
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Width = 43;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colDescripcion.DataPropertyName = "Descripcion";
+            this.colDescripcion.HeaderText = "Descripcion";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
+            this.colDescripcion.Width = 88;
+            // 
+            // colNombreCorto
+            // 
+            this.colNombreCorto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colNombreCorto.DataPropertyName = "NombreCorto";
+            this.colNombreCorto.HeaderText = "Abreviatura";
+            this.colNombreCorto.Name = "colNombreCorto";
+            this.colNombreCorto.ReadOnly = true;
+            this.colNombreCorto.Width = 86;
+            // 
+            // ColWebSite
+            // 
+            this.ColWebSite.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColWebSite.DataPropertyName = "WebSite";
+            this.ColWebSite.HeaderText = "WebSite";
+            this.ColWebSite.Name = "ColWebSite";
+            this.ColWebSite.Width = 73;
+            // 
+            // ColTelefono
+            // 
+            this.ColTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColTelefono.DataPropertyName = "Telefono";
+            this.ColTelefono.HeaderText = "Telefono";
+            this.ColTelefono.Name = "ColTelefono";
+            this.ColTelefono.Width = 74;
+            // 
+            // ColObservaciones
+            // 
+            this.ColObservaciones.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColObservaciones.DataPropertyName = "Observaciones";
+            this.ColObservaciones.HeaderText = "Observaciones";
+            this.ColObservaciones.Name = "ColObservaciones";
+            this.ColObservaciones.Width = 103;
+            // 
+            // frmConsultaCentros
             // 
             this.AcceptButton = this.btnBuscar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 321);
+            this.ClientSize = new System.Drawing.Size(880, 321);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label2);
@@ -268,7 +218,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvEstudiantes);
-            this.Name = "frmConsultaProfesores";
+            this.Name = "frmConsultaCentros";
             this.ShowInTaskbar = false;
             this.Text = "Consulta de Profesores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
@@ -289,17 +239,12 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaNacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCelular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstadoCivil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColObservaciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSexo;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreCorto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColWebSite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColObservaciones;
     }
 }
