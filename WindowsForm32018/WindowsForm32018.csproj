@@ -80,11 +80,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\frmCarreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmCarreras.Designer.cs">
+      <DependentUpon>frmCarreras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmAulas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\frmAulas.Designer.cs">
       <DependentUpon>frmAulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmConsultaCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmConsultaCarrera.Designer.cs">
+      <DependentUpon>frmConsultaCarrera.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmConsultaAulas.cs">
       <SubType>Form</SubType>
@@ -153,8 +165,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registros\frmCarreras.resx">
+      <DependentUpon>frmCarreras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmAulas.resx">
       <DependentUpon>frmAulas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmConsultaCarrera.resx">
+      <DependentUpon>frmConsultaCarrera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmConsultaAulas.resx">
       <DependentUpon>frmConsultaAulas.cs</DependentUpon>

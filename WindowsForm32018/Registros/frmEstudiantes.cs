@@ -54,7 +54,7 @@ namespace WindowsForm32018.Registros
 
         void llenarComboCarreras()
         {
-            this.cbCarrera.DataSource = carreraMant.GetListadoCarreras();
+            this.cbCarrera.DataSource = carreraMant.GetListado(null);
             this.cbCarrera.ValueMember = "ID";
             this.cbCarrera.DisplayMember = "Descripcion"; 
         }

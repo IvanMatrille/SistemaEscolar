@@ -56,6 +56,7 @@
             this.tslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsRejoj = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.carrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -113,6 +114,7 @@
             this.toolStripMenuItem2,
             this.centrosToolStripMenuItem,
             this.aulasToolStripMenuItem,
+            this.carrerasToolStripMenuItem,
             this.toolStripMenuItem3,
             this.asignaturasToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
@@ -265,6 +267,13 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // carrerasToolStripMenuItem
+            // 
+            this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
+            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.carrerasToolStripMenuItem.Text = "Carreras";
+            this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +325,7 @@
         private System.Windows.Forms.ToolStripMenuItem encriptarToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel tsRejoj;
+        private System.Windows.Forms.ToolStripMenuItem carrerasToolStripMenuItem;
     }
 }
 

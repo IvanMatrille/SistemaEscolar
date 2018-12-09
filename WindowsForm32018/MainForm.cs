@@ -149,5 +149,14 @@ namespace WindowsForm32018
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaCarreras frm = new frmConsultaCarreras(session);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+
+        }
     }
 }
