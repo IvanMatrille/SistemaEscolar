@@ -158,5 +158,13 @@ namespace WindowsForm32018
             frm.Show();
 
         }
+
+        private void asignaturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaAsignatura frm = new frmConsultaAsignatura(session);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
     }
 }
