@@ -10,19 +10,21 @@ using System.Windows.Forms;
 using INF518Core;
 using INF518Core.Clases;
 using WindowsForm32018.Clases;
+using WindowsForm32018.Registros;
+using INF518Core.Mantenimientos;
 
 namespace WindowsForm32018.Registros
 {
-    public partial class frmConsultaProfesores : Form
+    public partial class frmConsultaTipoEstudiante : Form
     {
-        ProfesorMantenimiento mant;
+        TipoMantenimiento mant;
         DataTable dt;
         Session session;
-        public frmConsultaProfesores(Session session)
+        public frmConsultaTipoEstudiante(Session session)
         {
             InitializeComponent();
             this.session = session;
-            mant = new ProfesorMantenimiento(session);
+            mant = new TipoMantenimiento(session);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -45,14 +47,15 @@ namespace WindowsForm32018.Registros
             StringBuilder filtro = new StringBuilder("ID>0 ");
             if (!string.IsNullOrWhiteSpace(this.txtNombre.Text))
             {
-                filtro.AppendFormat("AND (Nombre+' '+Apellido) LIKE '%{0}%' ",
+                filtro.AppendFormat("AND (Descripcion+' '+Observaciones) LIKE '%{0}%' ",
                                 this.txtNombre.Text);
             }
             return filtro.ToString();
         }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmProfesor frm = new frmProfesor(0, session);
+            frmTipoEstudiante frm = new frmTipoEstudiante(0, session);
             frm.StartPosition = FormStartPosition.CenterScreen;
             if(frm.ShowDialog()==DialogResult.OK)
             {
@@ -66,7 +69,7 @@ namespace WindowsForm32018.Registros
             int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
             if (id > 0)
             {
-                frmProfesor frm = new frmProfesor(id, session);
+                frmTipoEstudiante frm = new frmTipoEstudiante(id, session);
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
@@ -88,9 +91,9 @@ namespace WindowsForm32018.Registros
         {
             int id = 0;
             int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
-            if (id > 0)
+            if (id > 0 )
             {
-                DialogResult dr = MessageBox.Show("Esta seguro que desea eliminar esta Asignatura?",
+                DialogResult dr = MessageBox.Show("Esta seguro que desea eliminar este Tipo de Estudiante?",
                       "Advertencia", MessageBoxButtons.YesNo);
                 switch (dr)
                 {
@@ -100,7 +103,7 @@ namespace WindowsForm32018.Registros
                     case DialogResult.No:
                         break;
                 }
-
+                               
             }
         }
     }

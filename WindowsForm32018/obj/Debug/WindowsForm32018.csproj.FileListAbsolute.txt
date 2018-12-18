@@ -61,3 +61,6 @@ C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsFo
 C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaCarreras.resources
 C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmAsignaturas.resources
 C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaAsignatura.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmConsultaTipoEstudiante.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmTipoEstudiante.resources
+C:\#UASD-semestre 201820\Lenguaje 4\Proyecto Final L4\WindowsForm32018\WindowsForm32018\obj\Debug\WindowsForm32018.Registros.frmSecciones.resources

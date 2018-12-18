@@ -57,6 +57,8 @@
             this.tslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsRejoj = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tipoEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -116,7 +118,9 @@
             this.aulasToolStripMenuItem,
             this.carrerasToolStripMenuItem,
             this.toolStripMenuItem3,
-            this.asignaturasToolStripMenuItem});
+            this.asignaturasToolStripMenuItem,
+            this.tipoEstudiantesToolStripMenuItem,
+            this.seccionesToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Tag = "200";
@@ -125,7 +129,7 @@
             // estudianteToolStripMenuItem
             // 
             this.estudianteToolStripMenuItem.Name = "estudianteToolStripMenuItem";
-            this.estudianteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.estudianteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.estudianteToolStripMenuItem.Tag = "201";
             this.estudianteToolStripMenuItem.Text = "Estudiante";
             this.estudianteToolStripMenuItem.Click += new System.EventHandler(this.estudianteToolStripMenuItem_Click);
@@ -133,7 +137,7 @@
             // profesorToolStripMenuItem
             // 
             this.profesorToolStripMenuItem.Name = "profesorToolStripMenuItem";
-            this.profesorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.profesorToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.profesorToolStripMenuItem.Tag = "202";
             this.profesorToolStripMenuItem.Text = "Profesor";
             this.profesorToolStripMenuItem.Click += new System.EventHandler(this.profesorToolStripMenuItem_Click);
@@ -141,19 +145,19 @@
             // empleadoToolStripMenuItem
             // 
             this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
-            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.empleadoToolStripMenuItem.Tag = "203";
             this.empleadoToolStripMenuItem.Text = "Empleado";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(158, 6);
             // 
             // centrosToolStripMenuItem
             // 
             this.centrosToolStripMenuItem.Name = "centrosToolStripMenuItem";
-            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.centrosToolStripMenuItem.Tag = "204";
             this.centrosToolStripMenuItem.Text = "Centros";
             this.centrosToolStripMenuItem.Click += new System.EventHandler(this.centrosToolStripMenuItem_Click);
@@ -161,7 +165,7 @@
             // aulasToolStripMenuItem
             // 
             this.aulasToolStripMenuItem.Name = "aulasToolStripMenuItem";
-            this.aulasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aulasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.aulasToolStripMenuItem.Tag = "205";
             this.aulasToolStripMenuItem.Text = "Aulas";
             this.aulasToolStripMenuItem.Click += new System.EventHandler(this.aulasToolStripMenuItem_Click);
@@ -169,19 +173,19 @@
             // carrerasToolStripMenuItem
             // 
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
-            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.carrerasToolStripMenuItem.Text = "Carreras";
             this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(158, 6);
             // 
             // asignaturasToolStripMenuItem
             // 
             this.asignaturasToolStripMenuItem.Name = "asignaturasToolStripMenuItem";
-            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.asignaturasToolStripMenuItem.Tag = "206";
             this.asignaturasToolStripMenuItem.Text = "Asignaturas";
             this.asignaturasToolStripMenuItem.Click += new System.EventHandler(this.asignaturasToolStripMenuItem_Click);
@@ -275,6 +279,20 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tipoEstudiantesToolStripMenuItem
+            // 
+            this.tipoEstudiantesToolStripMenuItem.Name = "tipoEstudiantesToolStripMenuItem";
+            this.tipoEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.tipoEstudiantesToolStripMenuItem.Text = "Tipo Estudiantes";
+            this.tipoEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.tipoEstudiantesToolStripMenuItem_Click);
+            // 
+            // seccionesToolStripMenuItem
+            // 
+            this.seccionesToolStripMenuItem.Name = "seccionesToolStripMenuItem";
+            this.seccionesToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.seccionesToolStripMenuItem.Text = "Secciones";
+            this.seccionesToolStripMenuItem.Click += new System.EventHandler(this.seccionesToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +345,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel tsRejoj;
         private System.Windows.Forms.ToolStripMenuItem carrerasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoEstudiantesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seccionesToolStripMenuItem;
     }
 }
 

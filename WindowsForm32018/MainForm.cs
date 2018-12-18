@@ -166,5 +166,22 @@ namespace WindowsForm32018
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
+
+        private void tipoEstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaTipoEstudiante frm = new frmConsultaTipoEstudiante(session);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void seccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSecciones frm = new frmSecciones(0,session);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
     }
 }

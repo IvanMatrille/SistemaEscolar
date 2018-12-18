@@ -19,7 +19,7 @@ namespace WindowsForm32018.Registros
     {
         private static frmProfesor instancia;
         ProfesorMantenimiento mant;
-        TipoEstudianteMant tipoEst;
+        TipoMantenimiento tipoEst;
         CarreraMantenimiento carreraMant;
         Profesor objeto;
         Session session;
@@ -30,7 +30,7 @@ namespace WindowsForm32018.Registros
             InitializeComponent();
             this.session = session;
             mant = new ProfesorMantenimiento(session);
-            tipoEst = new TipoEstudianteMant(session);
+            tipoEst = new TipoMantenimiento(session);
             carreraMant = new CarreraMantenimiento(session);
             objeto = new Profesor();
             if (id > 0)

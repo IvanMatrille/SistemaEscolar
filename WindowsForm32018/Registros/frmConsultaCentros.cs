@@ -91,13 +91,17 @@ namespace WindowsForm32018.Registros
             int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
             if (id > 0)
             {
-                if (MessageBox.Show("¿Está seguro que desea eliminar este centro?", "Advertencia",
-                   MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                DialogResult dr = MessageBox.Show("Esta seguro que desea eliminar esta Asignatura?",
+                      "Advertencia", MessageBoxButtons.YesNo);
+                switch (dr)
                 {
-                    mant.Eliminar(id);
-                    return;
+                    case DialogResult.Yes:
+                        mant.Eliminar(id);
+                        break;
+                    case DialogResult.No:
+                        break;
                 }
-                
+
             }
         }
     }

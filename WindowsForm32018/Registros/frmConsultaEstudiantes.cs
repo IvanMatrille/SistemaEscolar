@@ -83,5 +83,25 @@ namespace WindowsForm32018.Registros
                 this.lblTotal.Text = dt.DefaultView.Count.ToString("#,###");
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
+            if (id > 0)
+            {
+                DialogResult dr = MessageBox.Show("Esta seguro que desea eliminar esta Asignatura?",
+                      "Advertencia", MessageBoxButtons.YesNo);
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        mant.Eliminar(id);
+                        break;
+                    case DialogResult.No:
+                        break;
+                }
+
+            }
+        }
     }
 }

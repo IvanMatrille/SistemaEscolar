@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClaseBase.cs" />
+    <Compile Include="Clases\TipoEstudiante.cs" />
     <Compile Include="Clases\Asignaturas.cs" />
     <Compile Include="Clases\Carreras.cs" />
     <Compile Include="Clases\Aulas.cs" />
@@ -54,12 +55,12 @@
     <Compile Include="ErrorResponse.cs" />
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Mantenimiento.cs" />
+    <Compile Include="Mantenimientos\TipoMantenimiento.cs" />
     <Compile Include="Mantenimientos\AulasMantenimiento.cs" />
     <Compile Include="Mantenimientos\AsignaturasMantenimiento.cs" />
     <Compile Include="Mantenimientos\CarreraMantenimiento.cs" />
     <Compile Include="Mantenimientos\CentrosMantenimiento.cs" />
     <Compile Include="Mantenimientos\ProfesorMantenimiento.cs" />
-    <Compile Include="Mantenimientos\TipoEstudianteMant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

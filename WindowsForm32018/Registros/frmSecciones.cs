@@ -15,52 +15,71 @@ using INF518Core.Mantenimientos;
 
 namespace WindowsForm32018.Registros
 {
-    public partial class frmCentros : Form
+    public partial class frmSecciones : Form
     {
-        private static frmCentros instancia;
-        CentrosMantenimiento mant;
-
-        Centros objeto;
+        private static frmSecciones instancia;
+        AsignaturasMantenimiento mant;
+        CarreraMantenimiento mantCarrera;
+        AulasMantenimiento aulaMant;
+        ProfesorMantenimiento mantProfe;
+        Asignaturas objeto;
         Session session;
 
-        public frmCentros(int id, Session session)
-        {
-            
+        public frmSecciones(int id, Session session)
+        {           
             InitializeComponent();
             this.session = session;
-            mant = new CentrosMantenimiento(session);
-            
-            objeto = new Centros();
+            mant = new AsignaturasMantenimiento(session);
+            mantCarrera = new CarreraMantenimiento(session);
+            aulaMant = new AulasMantenimiento(session);
+            mantProfe = new ProfesorMantenimiento(session);
+
+            objeto = new Asignaturas();
             if (id > 0)
             {
                 objeto = mant.GetInfo(id); //busca los datos del formulario
                 this.lblID.Text = id.ToString();
                 updateFormulario();
             }
+
+            llenarComboAula();
+            llenarComboProfesor();
         }
 
-       
+        void llenarComboProfesor()
+        {
+            this.cbProfesor.DataSource = mantProfe.GetListadoCombo(null);
+            this.cbProfesor.ValueMember = "ID";
+            this.cbProfesor.DisplayMember = "nombreCompleto ";
+        }
+
+        void llenarComboAula()
+        {
+            this.cbAula.DataSource = aulaMant.GetListado(null);
+            this.cbAula.ValueMember = "ID";
+            this.cbAula.DisplayMember = "Codigo";
+        }
+
         void updateFormulario()
         {
             objeto.ToString();
-            this.txtDescripcion.Text = objeto.Descripcion;
-            this.txtNombreCorto.Text = objeto.NombreCorto;
-            this.txtWebSite.Text = objeto.WebSite;
-            this.txtTelefono.Text = objeto.Telefono;
+
+            this.cbAula.SelectedValue = objeto.IDCarrera.ToString();
+            this.nuCapacidad.Value = Convert.ToInt32(objeto.Creditos.ToString());
             this.txtObservaciones.Text = objeto.Observaciones; 
         }
 
-        private frmCentros()
+        private frmSecciones()
         {
             InitializeComponent();
-            mant = new CentrosMantenimiento(null);
+            mant = new AsignaturasMantenimiento(null);
         }
 
-        public static frmCentros getInstancia()
+        public static frmSecciones getInstancia()
         {
             //patron de diseno singleton
             if (instancia == null || instancia.IsDisposed)
-                instancia = new frmCentros();
+                instancia = new frmSecciones();
 
             return instancia;
         }
@@ -75,18 +94,16 @@ namespace WindowsForm32018.Registros
         /// </summary>
         void updateClass()
         {
-            objeto.Descripcion = this.txtDescripcion.Text;
-            objeto.NombreCorto = this.txtNombreCorto.Text;
-            objeto.WebSite = this.txtWebSite.Text ;
-            objeto.Telefono = this.txtTelefono.Text;
+ 
+            objeto.Creditos = Convert.ToInt32(this.nuCapacidad.Value);
+            objeto.IDCarrera = Int32.Parse(this.cbAula.SelectedValue.ToString());
             objeto.Observaciones = this.txtObservaciones.Text;
-
         }
 
         bool camposValidados()
         {
             errorProvider1.Clear(); //limpia los errores que existan.
-
+            /*
             if (string.IsNullOrWhiteSpace(this.txtDescripcion.Text))
             {
                 this.txtDescripcion.Focus();
@@ -96,18 +113,10 @@ namespace WindowsForm32018.Registros
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(this.txtNombreCorto.Text))
-            {
-                this.txtDescripcion.Focus();
-                MessageBox.Show("No puede dejar campos abreviatura en blanco", "Advertencia",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return false;
-            }
+            */
 
             return true;
         }
-
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

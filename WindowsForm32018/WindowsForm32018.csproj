@@ -80,6 +80,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\frmSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmSecciones.Designer.cs">
+      <DependentUpon>frmSecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmConsultaTipoEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmConsultaTipoEstudiante.Designer.cs">
+      <DependentUpon>frmConsultaTipoEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmTipoEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmTipoEstudiante.Designer.cs">
+      <DependentUpon>frmTipoEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmAsignaturas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +195,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registros\frmSecciones.resx">
+      <DependentUpon>frmSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmConsultaTipoEstudiante.resx">
+      <DependentUpon>frmConsultaTipoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmTipoEstudiante.resx">
+      <DependentUpon>frmTipoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmAsignaturas.resx">
       <DependentUpon>frmAsignaturas.cs</DependentUpon>
     </EmbeddedResource>

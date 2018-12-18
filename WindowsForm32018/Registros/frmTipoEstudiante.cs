@@ -15,22 +15,20 @@ using INF518Core.Mantenimientos;
 
 namespace WindowsForm32018.Registros
 {
-    public partial class frmCentros : Form
+    public partial class frmTipoEstudiante : Form
     {
-        private static frmCentros instancia;
-        CentrosMantenimiento mant;
-
-        Centros objeto;
+        private static frmTipoEstudiante instancia;
+        TipoMantenimiento mant;
+        TipoEstudiante objeto;
         Session session;
 
-        public frmCentros(int id, Session session)
-        {
-            
+        public frmTipoEstudiante(int id, Session session)
+        {           
             InitializeComponent();
             this.session = session;
-            mant = new CentrosMantenimiento(session);
-            
-            objeto = new Centros();
+            mant = new TipoMantenimiento(session);
+
+            objeto = new TipoEstudiante();
             if (id > 0)
             {
                 objeto = mant.GetInfo(id); //busca los datos del formulario
@@ -39,28 +37,26 @@ namespace WindowsForm32018.Registros
             }
         }
 
-       
         void updateFormulario()
         {
             objeto.ToString();
             this.txtDescripcion.Text = objeto.Descripcion;
-            this.txtNombreCorto.Text = objeto.NombreCorto;
-            this.txtWebSite.Text = objeto.WebSite;
-            this.txtTelefono.Text = objeto.Telefono;
+            this.nuCostoCredito.Text = objeto.CostoCredito.ToString();
+            this.nuCostoInscripcion.Text = objeto.CostoInscripcion.ToString();
             this.txtObservaciones.Text = objeto.Observaciones; 
         }
 
-        private frmCentros()
+        private frmTipoEstudiante()
         {
             InitializeComponent();
-            mant = new CentrosMantenimiento(null);
+            mant = new TipoMantenimiento(null);
         }
 
-        public static frmCentros getInstancia()
+        public static frmTipoEstudiante getInstancia()
         {
             //patron de diseno singleton
             if (instancia == null || instancia.IsDisposed)
-                instancia = new frmCentros();
+                instancia = new frmTipoEstudiante();
 
             return instancia;
         }
@@ -76,11 +72,9 @@ namespace WindowsForm32018.Registros
         void updateClass()
         {
             objeto.Descripcion = this.txtDescripcion.Text;
-            objeto.NombreCorto = this.txtNombreCorto.Text;
-            objeto.WebSite = this.txtWebSite.Text ;
-            objeto.Telefono = this.txtTelefono.Text;
+            objeto.CostoInscripcion = Convert.ToInt32(this.nuCostoInscripcion.Value);
+            objeto.CostoCredito = Convert.ToInt32(this.nuCostoCredito.Value);
             objeto.Observaciones = this.txtObservaciones.Text;
-
         }
 
         bool camposValidados()
@@ -96,10 +90,19 @@ namespace WindowsForm32018.Registros
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(this.txtNombreCorto.Text))
+            if (string.IsNullOrWhiteSpace(this.nuCostoInscripcion.Text))
             {
                 this.txtDescripcion.Focus();
-                MessageBox.Show("No puede dejar campos abreviatura en blanco", "Advertencia",
+                MessageBox.Show("No puede dejar el campos Costo Inscripción en blanco", "Advertencia",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(this.nuCostoCredito.Text))
+            {
+                this.txtDescripcion.Focus();
+                MessageBox.Show("No puede dejar el campos Costo Creditos en blanco", "Advertencia",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return false;

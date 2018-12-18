@@ -19,7 +19,7 @@ namespace WindowsForm32018.Registros
     {
         private static frmEstudiantes instancia;
         Mantenimiento mant;
-        TipoEstudianteMant tipoEst;
+        TipoMantenimiento tipoEst;
         CarreraMantenimiento carreraMant;
         Estudiante estudiante;
         Session session;
@@ -30,8 +30,8 @@ namespace WindowsForm32018.Registros
             InitializeComponent();
             this.session = session;
             mant = new Mantenimiento(session);
-            tipoEst = new TipoEstudianteMant(session);
             carreraMant = new CarreraMantenimiento(session);
+            tipoEst = new TipoMantenimiento(session);
             estudiante = new Estudiante();
             if (id > 0)
             {
@@ -47,7 +47,7 @@ namespace WindowsForm32018.Registros
 
         void llenarComboTipoEstudiante()
         {
-            this.cbTipoEstudiante.DataSource = tipoEst.GetTiposEstudiantes();
+            this.cbTipoEstudiante.DataSource = tipoEst.GetListado(null);
             this.cbTipoEstudiante.ValueMember = "ID";
             this.cbTipoEstudiante.DisplayMember = "Descripcion";            
         }

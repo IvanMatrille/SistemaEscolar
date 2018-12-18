@@ -148,6 +148,35 @@ namespace INF518Core
             }
         }
 
+        public void Eliminar(int id)
+        {
+            StringBuilder sql = new StringBuilder();
+
+            if (id > 0)
+            {
+                sql.AppendFormat("UPDATE tblEstudiante SET Inactivo='True' WHERE ID={0}", id);
+            }
+            Command.CommandType = CommandType.Text;
+            Command.Connection = Connection;
+            Command.CommandText = sql.ToString();
+            try
+            {
+                Connection.Open(); //abre la conexion
+                Command.ExecuteNonQuery();
+                Error.ID = 1; //todo bien si es 1
+                Error.Descripcion = "OK";
+            }
+            catch (Exception ex)
+            {
+                Error.ID = 0; //0 es error
+                Error.Descripcion = ex.Message; //mensaje de error
+            }
+            finally
+            {
+                Connection.Close(); //cierra la conexion
+            }
+        }
+
         public Estudiante GetEstudianteInfo(int id)
         {
             Estudiante item = new Estudiante();
