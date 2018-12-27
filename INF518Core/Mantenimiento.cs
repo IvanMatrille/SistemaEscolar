@@ -46,15 +46,20 @@ namespace INF518Core
         public DataTable GetListadoEstudiantes(string filtro)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT ID, IdTipoEstudiante, Matricula, Cedula, Nombre, Apellido, Sexo, FechaNacimiento,"
-                    + " EstadoCivil, TelefonoCasa, TelefonoMovil, Email, Observaciones, IDCarrera "
-                    + " FROM tblEstudiante ");
+            sql.Append("SELECT e.ID AS ID, te.Descripcion AS idTipoEstudiante, e.Matricula AS Matricula, e.Cedula AS Cedula, "
+                    + " e.Nombre AS Nombre, e.Apellido AS Apellido, Nombre+' '+Apellido AS NombreCompleto, "
+                    + " e.Sexo AS Sexo, e.FechaNacimiento AS FechaNacimiento, "
+                    + " e.EstadoCivil AS EstadoCivil, e.TelefonoCasa AS TelefonoCasa, e.TelefonoMovil AS TelefonoMovil, "
+                    + " e.Email AS Email, e.Observaciones AS Observaciones, c.Descripcion AS IDCarrera "
+                    + " FROM tblEstudiante AS e "
+                    + " INNER JOIN tblTipoEstudiantes AS te ON e.idTipoEstudiante = te.ID "
+                    + " INNER JOIN tblCarreras AS c ON e.IDCarrera = c.ID ");
             if (!string.IsNullOrWhiteSpace(filtro))
             {
                 sql.Append(" WHERE ");
                 sql.Append(filtro);
             }
-            sql.Append(" ORDER BY ID, Nombre, Apellido");
+            sql.Append(" ORDER BY e.ID, e.Nombre, e.Apellido");
 
             return GetDataTableFromSQL(sql.ToString());
         }
@@ -206,7 +211,7 @@ namespace INF518Core
                         item.Matrícula = reader["Matricula"].ToString();
                         item.Sexo = reader["Sexo"].ToString();
                         item.EstadoCivil = reader["EstadoCivil"].ToString();
-                        item.IDCarrera = Convert.ToInt32(reader[""].ToString());
+                        item.IDCarrera = Convert.ToInt32(reader["IDCarrera"].ToString());
                         item.balance = Convert.ToDouble(reader["Balance"].ToString());
                         item.FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"]);
                         item.IdTipoEstudiante = Convert.ToInt32(reader["idTipoEstudiante"].ToString());

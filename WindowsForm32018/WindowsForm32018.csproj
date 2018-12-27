@@ -80,6 +80,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\frmConsultaInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmConsultaInscripcion.Designer.cs">
+      <DependentUpon>frmConsultaInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmInscripcion.Designer.cs">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\frmConsultaSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\frmConsultaSecciones.Designer.cs">
+      <DependentUpon>frmConsultaSecciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\frmSecciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +213,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registros\frmConsultaInscripcion.resx">
+      <DependentUpon>frmConsultaInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmInscripcion.resx">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\frmConsultaSecciones.resx">
+      <DependentUpon>frmConsultaSecciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmSecciones.resx">
       <DependentUpon>frmSecciones.cs</DependentUpon>
     </EmbeddedResource>

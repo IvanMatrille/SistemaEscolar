@@ -10,19 +10,23 @@ using System.Windows.Forms;
 using INF518Core;
 using INF518Core.Clases;
 using WindowsForm32018.Clases;
+using WindowsForm32018.Registros;
+using INF518Core.Mantenimientos;
 
 namespace WindowsForm32018.Registros
 {
-    public partial class frmConsultaEstudiantes : Form
+    public partial class frmConsultaInscripcion : Form
     {
         Mantenimiento mant;
+        CarreraMantenimiento carreraMant;
         DataTable dt;
         Session session;
-        public frmConsultaEstudiantes(Session session)
+        public frmConsultaInscripcion(Session session)
         {
             InitializeComponent();
             this.session = session;
             mant = new Mantenimiento(session);
+            carreraMant = new CarreraMantenimiento(session);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -45,19 +49,32 @@ namespace WindowsForm32018.Registros
             StringBuilder filtro = new StringBuilder("e.ID>0 ");
             if (!string.IsNullOrWhiteSpace(this.txtNombre.Text))
             {
-                filtro.AppendFormat("AND (e.Nombre+' '+e.Apellido) LIKE '%{0}%' ",
+                filtro.AppendFormat("AND (e.Nombre+' '+e.Observaciones) LIKE '%{0}%' ",
                                 this.txtNombre.Text);
             }
             return filtro.ToString();
         }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmEstudiantes frm = new frmEstudiantes(0, session);
+            int id = 0;
+            int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
+            if (id > 0)
+            {
+                frmInscripcion frm = new frmInscripcion(id, session);
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    btnBuscar_Click(sender, e);
+                }
+            }
+
+            /*frmAsignaturas frm = new frmAsignaturas(0, session);
             frm.StartPosition = FormStartPosition.CenterScreen;
             if(frm.ShowDialog()==DialogResult.OK)
             {
                 btnBuscar_Click(sender, e);
-            }
+            } */
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -66,7 +83,7 @@ namespace WindowsForm32018.Registros
             int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
             if (id > 0)
             {
-                frmEstudiantes frm = new frmEstudiantes(id, session);
+                frmInscripcion frm = new frmInscripcion(id, session);
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
@@ -84,11 +101,11 @@ namespace WindowsForm32018.Registros
             }
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             int id = 0;
             int.TryParse(dgvEstudiantes.CurrentRow.Cells["colID"].Value.ToString(), out id);
-            if (id > 0)
+            if (id > 0 )
             {
                 DialogResult dr = MessageBox.Show("Esta seguro que desea eliminar esta Asignatura?",
                       "Advertencia", MessageBoxButtons.YesNo);
@@ -100,7 +117,7 @@ namespace WindowsForm32018.Registros
                     case DialogResult.No:
                         break;
                 }
-
+                               
             }
         }
     }

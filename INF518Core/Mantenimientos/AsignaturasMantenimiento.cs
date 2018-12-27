@@ -59,6 +59,18 @@ namespace INF518Core.Mantenimientos
             return GetDataTableFromSQL(sql.ToString());
         }
 
+        public DataTable GetAsignaturaPorId(int id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append("SELECT ID, Descripcion, Clave, IDCarrera, Creditos, Observaciones "
+                        + " FROM tblAsignaturas ");
+            sql.Append(" WHERE IDCarrera = ");
+            sql.Append(id);
+            sql.Append("ORDER BY ID, Descripcion, Clave");
+
+            return GetDataTableFromSQL(sql.ToString());
+        }
+
         public void Guardar(Asignaturas item)
         {
             StringBuilder sql = new StringBuilder();

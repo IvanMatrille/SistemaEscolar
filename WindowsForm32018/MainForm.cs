@@ -177,11 +177,18 @@ namespace WindowsForm32018
 
         private void seccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSecciones frm = new frmSecciones(0,session);
+            frmConsultaSecciones frm = new frmConsultaSecciones(session);
             frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
 
+        private void inscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaInscripcion frm = new frmConsultaInscripcion(session);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
     }
 }

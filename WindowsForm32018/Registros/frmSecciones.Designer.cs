@@ -37,7 +37,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbAsignatura = new System.Windows.Forms.ComboBox();
             this.cbProfesor = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbHora2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbDia2 = new System.Windows.Forms.ComboBox();
@@ -107,7 +109,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 170);
+            this.label13.Location = new System.Drawing.Point(8, 177);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(78, 13);
             this.label13.TabIndex = 41;
@@ -115,7 +117,7 @@
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(6, 192);
+            this.txtObservaciones.Location = new System.Drawing.Point(7, 199);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(518, 39);
@@ -123,7 +125,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbAsignatura);
             this.groupBox1.Controls.Add(this.cbProfesor);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbHora2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbDia2);
@@ -148,13 +152,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Secciones";
             // 
+            // cbAsignatura
+            // 
+            this.cbAsignatura.FormattingEnabled = true;
+            this.cbAsignatura.Location = new System.Drawing.Point(109, 49);
+            this.cbAsignatura.Name = "cbAsignatura";
+            this.cbAsignatura.Size = new System.Drawing.Size(144, 21);
+            this.cbAsignatura.TabIndex = 69;
+            this.cbAsignatura.Text = "Selecciona";
+            // 
             // cbProfesor
             // 
             this.cbProfesor.FormattingEnabled = true;
-            this.cbProfesor.Location = new System.Drawing.Point(108, 88);
+            this.cbProfesor.Location = new System.Drawing.Point(108, 111);
             this.cbProfesor.Name = "cbProfesor";
             this.cbProfesor.Size = new System.Drawing.Size(144, 21);
-            this.cbProfesor.TabIndex = 65;
+            this.cbProfesor.TabIndex = 68;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "Asignatura";
             // 
             // cbHora2
             // 
@@ -186,13 +208,13 @@
             // 
             this.cbDia2.FormattingEnabled = true;
             this.cbDia2.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miércoles",
-            "Jueves",
-            "Viernes",
-            "Sábado",
-            "Domingo"});
+            "LU",
+            "MA",
+            "MI",
+            "JU",
+            "VI",
+            "SA",
+            "DO"});
             this.cbDia2.Location = new System.Drawing.Point(378, 88);
             this.cbDia2.Name = "cbDia2";
             this.cbDia2.Size = new System.Drawing.Size(144, 21);
@@ -236,15 +258,16 @@
             // 
             // cbDia1
             // 
+            this.cbDia1.DisplayMember = "LU, MA, MI, JU, VI, SA, DO";
             this.cbDia1.FormattingEnabled = true;
             this.cbDia1.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miércoles",
-            "Jueves",
-            "Viernes",
-            "Sábado",
-            "Domingo"});
+            "LU",
+            "MA",
+            "MI",
+            "JU",
+            "VI",
+            "SA",
+            "DO"});
             this.cbDia1.Location = new System.Drawing.Point(378, 22);
             this.cbDia1.Name = "cbDia1";
             this.cbDia1.Size = new System.Drawing.Size(144, 21);
@@ -263,7 +286,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 91);
+            this.label6.Location = new System.Drawing.Point(8, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 53;
@@ -271,7 +294,7 @@
             // 
             // nuCapacidad
             // 
-            this.nuCapacidad.Location = new System.Drawing.Point(108, 119);
+            this.nuCapacidad.Location = new System.Drawing.Point(109, 140);
             this.nuCapacidad.Name = "nuCapacidad";
             this.nuCapacidad.Size = new System.Drawing.Size(144, 20);
             this.nuCapacidad.TabIndex = 52;
@@ -279,7 +302,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 126);
+            this.label5.Location = new System.Drawing.Point(8, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 51;
@@ -288,7 +311,7 @@
             // cbAula
             // 
             this.cbAula.FormattingEnabled = true;
-            this.cbAula.Location = new System.Drawing.Point(108, 54);
+            this.cbAula.Location = new System.Drawing.Point(109, 80);
             this.cbAula.Name = "cbAula";
             this.cbAula.Size = new System.Drawing.Size(144, 21);
             this.cbAula.TabIndex = 50;
@@ -296,7 +319,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 62);
+            this.label3.Location = new System.Drawing.Point(8, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 49;
@@ -345,6 +368,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbDia1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbProfesor;
+        private System.Windows.Forms.ComboBox cbAsignatura;
     }
 }

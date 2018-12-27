@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClaseBase.cs" />
+    <Compile Include="Clases\Inscripcion.cs" />
+    <Compile Include="Clases\Seccion.cs" />
     <Compile Include="Clases\TipoEstudiante.cs" />
     <Compile Include="Clases\Asignaturas.cs" />
     <Compile Include="Clases\Carreras.cs" />
@@ -55,6 +57,8 @@
     <Compile Include="ErrorResponse.cs" />
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Mantenimiento.cs" />
+    <Compile Include="Mantenimientos\InscripcionMantenimiento.cs" />
+    <Compile Include="Mantenimientos\SeccionesMantenimiento.cs" />
     <Compile Include="Mantenimientos\TipoMantenimiento.cs" />
     <Compile Include="Mantenimientos\AulasMantenimiento.cs" />
     <Compile Include="Mantenimientos\AsignaturasMantenimiento.cs" />
